@@ -273,11 +273,13 @@ img {
 }
 .team-list {
   display: flex;
-  /* margin-right: 0; */
 }
 .team-item {
   background-color: var(--main-white-color);
   margin-right: 24px;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  border-radius: 0px 0px 4px 4px;
 }
 .team-item:nth-last-child() {
   margin-right: 0;
@@ -310,12 +312,6 @@ img {
 .footer {
   background: var(--main-dark-color);
   display: flex;
-  /* display: flex; */
-  /* padding: 100px 0; */
-  /* padding: 100px 1020px; */
-  /* padding-top: 100px;
-  padding-right: 864px;
-  margin: 0; */
 }
 
 .footer-container {
@@ -327,7 +323,6 @@ img {
   color: var(--light-color);
   display: flex;
   margin-bottom: 16px;
-  /* padding-bottom: 16px; */
 }
 .footer-logo-web-text {
   font-family: var(--font-family-raleway);
@@ -353,17 +348,38 @@ img {
 
 /* ----------------------- PORTFOLIO ------------------- section */
 .portfolio {
-  display: flex;
+  /* display: flex; */
+  /* box-sizing: border-box; */
+}
+
+.portfolio-container {
+  padding: 96px 156px 120px 156px;
 }
 .portfolio-buttons-item {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
-  padding: 0px;
-  gap: 24px;
+  /* align-items: flex-start; */
+  /* padding: 0px; */
+  /* gap: 24px; */
   justify-content: center;
-  text-align: center;
+  margin-right: 24px;
+  box-sizing: border-box;
+  /* text-align: center; */
+  /* align-items: center; */
+  /* padding: 24px 12px; */
+}
+.portfolio-buttons-list {
+  display: flex;
   align-items: center;
+  /* margin-right: 24px; */
+  margin-bottom: 72px;
+  justify-content: center;
+}
+
+.portfolio-products-list {
+  display: flex;
+  flex-wrap: wrap;
+  /* align-items: center; */
 }
 .portfolio-buttons-item-btn {
   background-color: var(--light-color);
@@ -377,6 +393,7 @@ img {
   letter-spacing: 0.04em;
   cursor: pointer;
   /*  */
+  padding: 24px 12px;
 }
 
 .portfolio-buttons-item-btn:hover,
@@ -389,7 +406,10 @@ img {
 }
 .portfolio-product-item {
   background-color: var(--main-white-color);
+  border: 1px solid #e7e9fc;
+  margin-right: 24px;
   box-sizing: border-box;
+  margin-bottom: 48px;
 }
 .portfolio-product-item-header {
   font-weight: 500;
@@ -397,10 +417,19 @@ img {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--main-dark-color);
+  padding-top: 32px;
+  margin-bottom: 8px;
+  /* padding-right: 16px; */
 }
 .portfolio-product-item-text {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--main-dark-color);
+  /* padding-right: 16px; */
+  padding-bottom: 32px;
+}
+
+.products-caption {
+  padding-left: 16px;
 }
