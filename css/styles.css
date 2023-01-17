@@ -19,6 +19,19 @@ body {
   --light-color: #f4f4fd;
   --dark-light-color: #e7e9fc;
 }
+
+.visually-hidden {
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 h1,
 h2,
 h3,
@@ -59,6 +72,9 @@ img {
   background-color: var(--main-white-color);
   padding-top: 24px;
   padding-bottom: 24px;
+  box-sizing: border-box;
+  background: #ffffff;
+  border-bottom: 1px solid #e7e9fc;
 }
 
 .header-container {
@@ -100,7 +116,7 @@ img {
 .header-item {
   margin-right: 40px;
 }
-.header-item:nth-last-child() {
+.header-item:last-child() {
   margin-right: 0;
 }
 
@@ -113,11 +129,11 @@ img {
 }
 .contacts {
   font-style: normal;
-  /* justify-content: flex-end; */
   margin-left: auto;
 }
 .contact-link {
   color: var(--dark-color);
+  padding: 30px 30px;
 }
 .contact-link:hover,
 .contact-link:focus {
@@ -131,7 +147,7 @@ img {
 .contact-item {
   margin-right: 40px;
 }
-.contact-item:nth-last-child() {
+.contact-item:last-child() {
   margin-right: 0;
 }
 
@@ -185,18 +201,6 @@ img {
 
 /* ------------------- ATTITUDES --------------------- section */
 
-.visually-hidden {
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
 .attitudes-container {
   padding: 120px 156px;
 }
@@ -226,8 +230,6 @@ img {
 
 /* ---------------------- PRODUCTS ------------- section */
 
-/* .products {
-} */
 .products-container {
   padding: 0 156px 120px;
 }
@@ -250,9 +252,10 @@ img {
   align-items: flex-start;
   margin-right: 24px;
 }
-.products-item:nth-last-child() {
+.products-item:last-child() {
   margin-right: 0;
 }
+
 /* ----------------------- TEAM ------------------- section */
 
 .team {
@@ -281,7 +284,7 @@ img {
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
 }
-.team-item:nth-last-child() {
+.team-item:last-child() {
   margin-right: 0;
 }
 
@@ -347,10 +350,6 @@ img {
 /* --------------------- portfolio.html file ------------- */
 
 /* ----------------------- PORTFOLIO ------------------- section */
-.portfolio {
-  /* display: flex; */
-  /* box-sizing: border-box; */
-}
 
 .portfolio-container {
   padding: 96px 156px 120px 156px;
@@ -358,20 +357,13 @@ img {
 .portfolio-buttons-item {
   display: flex;
   flex-direction: row;
-  /* align-items: flex-start; */
-  /* padding: 0px; */
-  /* gap: 24px; */
   justify-content: center;
   margin-right: 24px;
   box-sizing: border-box;
-  /* text-align: center; */
-  /* align-items: center; */
-  /* padding: 24px 12px; */
 }
 .portfolio-buttons-list {
   display: flex;
   align-items: center;
-  /* margin-right: 24px; */
   margin-bottom: 72px;
   justify-content: center;
 }
@@ -379,7 +371,6 @@ img {
 .portfolio-products-list {
   display: flex;
   flex-wrap: wrap;
-  /* align-items: center; */
 }
 .portfolio-buttons-item-btn {
   background-color: var(--light-color);
@@ -392,8 +383,7 @@ img {
   line-height: 1.5;
   letter-spacing: 0.04em;
   cursor: pointer;
-  /*  */
-  padding: 24px 12px;
+  padding: 12px 24px;
 }
 
 .portfolio-buttons-item-btn:hover,
@@ -419,14 +409,12 @@ img {
   color: var(--main-dark-color);
   padding-top: 32px;
   margin-bottom: 8px;
-  /* padding-right: 16px; */
 }
 .portfolio-product-item-text {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--main-dark-color);
-  /* padding-right: 16px; */
   padding-bottom: 32px;
 }
 
